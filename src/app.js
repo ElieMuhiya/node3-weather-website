@@ -6,8 +6,8 @@ const geocode = require('./utils/geocode')
 const weather = require('./utils/weather')
 
 const app = express()
-
-//define paths for express config
+const port = process.env.PORT || 3000
+    //define paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialPath = path.join(__dirname, '../templates/partials')
@@ -139,7 +139,7 @@ res.send({
 })
 })*/
 
-app.listen(7000, () => {
+app.listen(port, () => {
 
-    console.log("server is running on port 7000")
+    console.log("server is running on por" + port)
 })
